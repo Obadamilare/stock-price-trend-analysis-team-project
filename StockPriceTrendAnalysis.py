@@ -1,49 +1,6 @@
-# ==== PERSON 2: Data entry and validation ====
-def build_stock_data():
-    stock_data = [{}]
-    pass
-
-def validate_records(stock_data):
-    pass
-
-# ==== PERSON 3: Single stock analysis ====
-def get_first_close(stock_data, stock_name):
-    pass
-
-def get_average_close(stock_data, stock_name):
-    pass
-
-def get_highest_close(stock_data, stock_name):
-    pass
-
-def get_lowest_close(stock_data, stock_name):
-    pass
-
-def daily_price_changes(stock_data, stock_name):
-    pass
-
-def average_daily_range(stock_data, stock_name):
-    pass
-
-# ==== PERSON 4: Aggregate and volume ====
-def overall_return(stock_data, stock_name):
-    pass
-
-def classify_overall_trend(overall_return_value):
-    pass
-
-def count_positive_negative_days(daily_changes_list):
-    pass
-
-def volume_summary(stock_data, stock_name):
-    pass
-
-# ==== PERSON 5: Comparison and report ====
-def compare_stocks(stock_data):
-    pass
-
-
 #SYSTEM MENU
+
+
 while True:
     print("""
 1. Analyse a stock
@@ -103,7 +60,5 @@ while True:
         print("Enter a valid number.")
         continue
 
-
-#testing
 
 
