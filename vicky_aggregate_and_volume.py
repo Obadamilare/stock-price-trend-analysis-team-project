@@ -67,10 +67,10 @@ def count_positive_negative_days(daily_change_list):
     no_change = 0
 
     for record in daily_change_list:
-        if record ["change"] > 0:
+        if record ["price_change"] > 0:
             positive_days += 1
 
-        elif record ["change"] < 0 :
+        elif record ["price_change"] < 0 :
             negative_days += 1
 
         else:
@@ -118,7 +118,6 @@ def get_volume_summary(stock_data, stock_name):
             highest_volume = record["volume"]
 
         else:
-            record["volume"] < lowest_volume:
             lowest_volume = record["volume"]
 
     return {
