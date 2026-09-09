@@ -11,7 +11,7 @@ def get_first_close(stock_data, stock_name):
     Return:
     The first closing price of the selected stock.
     """
-    first_close = stock_data[stock_name][0]["close"] #[stock_data][0] means first close
+    first_close = stock_data[stock_name][0]["close"] #[stock_name][0] means day one data for the selected stock name
     return first_close
 
 
@@ -28,9 +28,9 @@ def get_average_close(stock_data, stock_name):
     Return:
     The average closing price of the selected stock.
     """
-     total_close = 0 # variable initialization
+    total_close = 0 # variable initialization
 
-     for record in stock_data[stock_name]:
+    for record in stock_data[stock_name]:
         # Add each day's closing price to the total close
         total_close += record["close"]
 
@@ -51,14 +51,14 @@ def get_highest_close(stock_data, stock_name):
     Return:
     The highest closing price of selected stock
     """
-    highest_close = stock_data[stock_name][0]["close"] #[stock_data][0] means first close
+     highest_close = stock_data[stock_name][0]["close"] #[stock_data][0] means first close
 
-    for record in stock_data[stock_name]:
+     for record in stock_data[stock_name]:
         # Compare each closing price to the current highest close
-        if record["close"] > highest_close
-        highest_close = record["close"]
+        if record["close"] > highest_close:
+            highest_close = record["close"]
     
-    return highest_close
+     return highest_close
     
 
 def get_lowest_close(stock_data, stock_name):
@@ -77,13 +77,13 @@ def get_lowest_close(stock_data, stock_name):
 
     for record in stock_data[stock_name]:
         # Compare each closing price to the current lowest close
-        if record["close"] < lowest_close
-        lowest_close = record["close"]
+        if record["close"] < lowest_close:
+            lowest_close = record["close"]
     
     print("Lowest Closing Price:",lowest_close)
     return lowest_close
 
-def daily_price_changes(stock_data, stock_name):
+def get_daily_price_changes(stock_data, stock_name):
     """
     Calculate the daily price and percentage change for selected stock
     Compare each day closing price with the previous day
@@ -120,7 +120,7 @@ def daily_price_changes(stock_data, stock_name):
             trend = "Strong Increase"
         elif percentage_change > 0:
             trend = "Moderate Increase"
-        elif percentage trend == 0:
+        elif percentage_change == 0:
             trend = "No Change"
         elif percentage_change >= -2:
             trend = "Moderate Decrease"
@@ -146,7 +146,7 @@ def print_daily_report(stock_data, stock_name):
     """Print the daily stock report in a table"""
     
     # Get daily price changes
-    results = daily_price_changes(stock_data, stock_name)
+    results = get_daily_price_changes(stock_data, stock_name)
     
     # Print the table headings
     print(f"{'DATE':<10}{'STOCK':<10}{'CLOSE':<10}{'CHANGE':<10}{'RETURN':<12}{'TREND':<20}")
