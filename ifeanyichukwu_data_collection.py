@@ -1,6 +1,7 @@
 # ==== PERSON 2: Data entry and validation ====
+
 def build_stock_data():
-    raw_records = [
+     raw_records = [
         # ALPHA
         {"date": "01-Aug", "stock": "ALPHA", "open": 100, "high": 103, "low": 98, "close": 102, "volume": 1200},
         {"date": "02-Aug", "stock": "ALPHA", "open": 102, "high": 105, "low": 101, "close": 104, "volume": 1350},
@@ -38,19 +39,57 @@ def build_stock_data():
         {"date": "10-Aug", "stock": "GAMMA", "open": 201, "high": 220, "low": 195, "close": 215, "volume": 4200},
     ]
 
-    stock_data = {"ALPHA": [], "BETA": [], "GAMMA": []}
+     stock_data = {}
 
-    for record in raw_records:
-        if record["stock"] == "ALPHA":
-            stock_data["ALPHA"].append(record)
-        elif record["stock"] == "BETA":
-            stock_data["BETA"].append(record)
-        elif record["stock"] == "GAMMA":
-            stock_data["GAMMA"].append(record)
-
-    return stock_data
+     for record in raw_records:
+        stock_name = record["stock"]
+        day_record = {"date": record["date"],    #I can also use pop() here to remove the stock name from the dictionary.
+                      "open": record["open"],
+                      "high": record["high"],
+                      "low": record["low"], 
+                      "close": record["close"],
+                      "volume": record["volume"],
+                      }
+        if stock_name not in stock_data:
+            stock_data[stock_name] = []
+        stock_data[stock_name].append(day_record)
+  
+     return stock_data
 
 
 
 def validate_records(stock_data):
-    pass
+    issues = []
+
+    for stock_name, records  in stock_data.items():      #Or, for stock_name in stock_data:
+        for record in records:   #Or, for record in stock_data[stock_name] 
+            if records["close"] <0:
+                issues.append(f"{stock_name}{records["date"]} : close price not positive")
+
+            if records["high"] <= records["low"]:
+                issues.append(f"{stock_name}{records["date"]} : high is less than low")
+
+            if records["high"] <= records["open"]:
+                issues.append(f"{stock_name}{records["date"]} : high is less than open")
+
+            if records["high"] <= records["close"]:
+                issues.append(f"{stock_name}{records["date"]} : high is less than close")
+
+            if records["low"] >= records["open"]:
+                issues.append(f"{stock_name}{records["date"]} : low is greater than open")
+
+            if records["low"] >= records["close"]:
+                issues.append(f"{stock_name}{records["date"]} : low is greater than close")
+
+            if records["volume"] <= 0:
+                issues.append(f"{stock_name}{records["date"]} : volume is zero or negative")
+
+        return issues
+
+        
+        
+
+    
+
+
+    
