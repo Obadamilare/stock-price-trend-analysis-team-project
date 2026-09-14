@@ -51,7 +51,7 @@ def get_highest_close(stock_data, stock_name):
     Return:
     The highest closing price of selected stock
     """
-     highest_close = stock_data[stock_name][0]["close"] #[stock_data][0] means first close
+     highest_close = stock_data[stock_name][0]["close"] 
 
      for record in stock_data[stock_name]:
         # Compare each closing price to the current highest close
@@ -160,7 +160,7 @@ def print_daily_report(stock_data, stock_name):
     for result in results:
         print(f"{result['date']:<10}{stock_name:<10}{result['close']:<10}{result['change']:<+10}{str(result['percentage_change']) + '%':<12}{result['trend']:<20}")
      
-def average_daily_range(stock_data, stock_name):
+def get_average_daily_range(stock_data, stock_name):
 
     """
     Calculate the average daily range of selected stock.

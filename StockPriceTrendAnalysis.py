@@ -62,7 +62,7 @@ def build_stock_analysis_report(stock_data, stock_name):
         Negative Days: {positive_negative_days["negative_days"]}
         No Change days: {positive_negative_days["no_change"]}
 
-        Average Daily Range: {average_daily_range(stock_data, stock_name)}
+        Average Daily Range: {get_average_daily_range(stock_data, stock_name)}
         Average Trading Volume: {volume_data["average_volume"]}
 
         Overall Trend: 
@@ -132,7 +132,7 @@ else:
                         continue
             elif response == 2:
                 #Call the function to compare all the stocks
-                pass
+                compare_stocks(stock_data)
             elif response == 3:
                 #Write the code to view highest-performing stock
                 best_stock, best_return, best_overall_trend = get_highest_performing_stock(stock_data)
