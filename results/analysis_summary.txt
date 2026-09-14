@@ -1,0 +1,30 @@
+
+ MULTI-STOCK COMPARISON TABLE 
+
+===================================================================================================================
+STOCK    | FIRST    | FINAL    | AVG CLOSE  | HIGH     | LOW      | RETURN (%)  | AVG VOL    | TREND                 
+-------------------------------------------------------------------------------------------------------------------
+ALPHA    | 102.00   | 115.00   | 107.80     | 115.00   | 102.00   | 12.75       | 1630.00    | STRONG UPWARD TREND   
+BETA     | 151.00   | 134.00   | 143.60     | 153.00   | 134.00   | -11.26      | 2160.00    | STRONG DOWNWARD TREND 
+GAMMA    | 201.00   | 215.00   | 204.80     | 215.00   | 199.00   | 6.97        | 2800.00    | STRONG UPWARD TREND   
+===================================================================================================================
+
+
+
+
+ COMPARATIVE QUESTIONS & ANSWERS 
+======================================================================
+1. Highest overall return          : ALPHA (12.75%)
+
+2. Lowest return                   : BETA (-11.26%)
+
+3. Highest average closing price   : GAMMA (204.80)
+
+4. Largest daily price range       : GAMMA (13.80)
+
+5. Highest average volume           : GAMMA (2800.00)
+
+6. Greatest number of positive days : ALPHA (6 days)
+
+7. Most volatile (by range)         : GAMMA (13.80)
+======================================================================
