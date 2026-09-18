@@ -26,9 +26,9 @@ GAMMA also recorded the highest average trading volume of the three stocks, at 2
 
 ## What Surprised Me
 
-The most surprising pattern in this dataset was GAMMA. 
-• Going in, I expected the stock with the highest overall return to also look the steadiest, since a strong finish usually suggests a smooth climb. ALPHA fit that expectation, a strong return with a consistently upward path. GAMMA did not. 
-• Despite ending with a solid positive return, approximately 6.97 percent, it was also by far the most volatile of the three stocks, with an average daily range nearly three times wider than ALPHA's, and its single largest price swing happening on its very last trading day, the same day its trading volume also spiked to its highest point in the entire dataset.
+The most surprising pattern in this dataset was GAMMA. <br>
+• Going in, I expected the stock with the highest overall return to also look the steadiest, since a strong finish usually suggests a smooth climb. ALPHA fit that expectation, a strong return with a consistently upward path. GAMMA did not. <br>
+• Despite ending with a solid positive return, approximately 6.97 percent, it was also by far the most volatile of the three stocks, with an average daily range nearly three times wider than ALPHA's, and its single largest price swing happening on its very last trading day, the same day its trading volume also spiked to its highest point in the entire dataset. <br>
 • A positive result and high volatility showing up together in the same stock was not something I expected before running the numbers, it's a reminder that a good overall return can hide a genuinely bumpy road to get there, something a single overall return percentage on its own would never reveal.
 
 ## What This Dataset Cannot Tell Us
