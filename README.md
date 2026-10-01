@@ -73,5 +73,5 @@ Future versions of this project could replace the manually entered dataset with 
 5. Follow the on screen menu to analyze individual stocks, compare stocks, or view volume summaries.
 
 ## Author
-Adekogbon Obadamilare Testimony, Team Captain, together with the Stock Price Trend Analysis team, SmartBizCrux Python Study Group.
+Umeizudike Chukwuemeka, Team Member, together with the Stock Price Trend Analysis team, SmartBizCrux Python Study Group.
 
